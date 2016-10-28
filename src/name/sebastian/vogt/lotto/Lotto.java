@@ -6,7 +6,7 @@ import java.util.Collections;
 
 public class Lotto {
 
-    protected ArrayList<Object> allNumbers;
+    protected ArrayList<Integer> allNumbers;
 
 
     protected int[] myNumbers;
@@ -26,7 +26,7 @@ public class Lotto {
         this.allNumbersLength = allNumbersLength;
         this.myNumbers = new int[this.myNumbersLength];
 
-        this.allNumbers = new ArrayList<Object>();
+        this.allNumbers = new ArrayList<Integer>();
 
         this.prepare();
         this.shuffle();
@@ -51,7 +51,7 @@ public class Lotto {
         int randomNumber;
         for(int i = 0; i < this.myNumbers.length; i ++) {
             randomNumber = this.randomBetween(0, this.allNumbers.size());
-            this.myNumbers[i] = (int) this.allNumbers.get(randomNumber);
+            this.myNumbers[i] = this.allNumbers.get(randomNumber);
             this.allNumbers.remove(randomNumber);
             this.shuffle();
         }
@@ -60,7 +60,7 @@ public class Lotto {
 
     public int getSuperNumber() {
         this.shuffle();
-        return (int) this.allNumbers.get(this.randomBetween(0, this.allNumbers.size()));
+        return this.allNumbers.get(this.randomBetween(0, this.allNumbers.size()));
     }
 
 
