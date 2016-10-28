@@ -6,13 +6,13 @@ import java.util.Collections;
 
 public class Lotto {
 
-    ArrayList<Object> allNumbers;
+    protected ArrayList<Object> allNumbers;
 
 
-    int[] myNumbers;
+    protected int[] myNumbers;
 
-    int allNumbersLength;
-    int myNumbersLength;
+    protected int allNumbersLength;
+    protected int myNumbersLength;
 
 
     public Lotto(int myNumbersLength, int allNumbersLength) {

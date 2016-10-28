@@ -7,7 +7,8 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        for(int i = 0; i < 1000; i ++) {
+
+        for(int i = 0; i < 10; i ++) {
             int[] myNumbers = new int[6];
             Lotto lotto = new Lotto(6, 49);
             myNumbers = lotto.getNumbers();
