@@ -43,14 +43,14 @@ public class Lotto {
         Collections.shuffle(this.allNumbers);
     }
 
-    protected int randomBetween(int min, int max) {
+    public static int randomBetween(int min, int max) {
         return (int) Math.floor(Math.random() * (max - min) + min);
     }
 
     public int[] getNumbers() {
         int randomNumber;
         for(int i = 0; i < this.myNumbers.length; i ++) {
-            randomNumber = this.randomBetween(0, this.allNumbers.size());
+            randomNumber = randomBetween(0, this.allNumbers.size());
             this.myNumbers[i] = this.allNumbers.get(randomNumber);
             this.allNumbers.remove(randomNumber);
             this.shuffle();
@@ -60,7 +60,7 @@ public class Lotto {
 
     public int getSuperNumber() {
         this.shuffle();
-        return this.allNumbers.get(this.randomBetween(0, this.allNumbers.size()));
+        return this.allNumbers.get(randomBetween(0, this.allNumbers.size()));
     }
 
 
